@@ -11,6 +11,9 @@ dependencyManagement {
 dependencies {
     compile project(":components:rest-support")
 
+    compile "org.springframework.cloud:spring-cloud-starter-sleuth"
+    compile "org.springframework.cloud:spring-cloud-sleuth-stream"
+    compile "org.springframework.cloud:spring-cloud-starter-stream-rabbit"
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
@@ -27,8 +30,8 @@ dependencies {
 
 bootRun.environment([
     "APPLICATION_OAUTH_ENABLED": true,
-    "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "YOUR_CLIENT_ID_HERE",
-    "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "YOUR_CLIENT_SECRET_HERE",
+    "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "34d7b60d-9948-4cad-abda-e8cb483c809c",
+    "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "c33d2453-4228-4473-8ce2-f0cb442a384b",
     "SECURITY_USER_NAME": "actuator",
     "SECURITY_USER_PASSWORD": "operations4red"
 ])
