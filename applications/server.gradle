@@ -8,6 +8,15 @@ dependencyManagement {
     }
 }
 
+bootRun.environment([
+        "APPLICATION_OAUTH_ENABLED": true,
+        "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "20ce1036-9ada-411a-b0d5-3394b92cb050",
+        "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "69c9183c-1fe2-4d91-94fc-ffa1fbc36602",
+        "SECURITY_USER_NAME": "actuator",
+        "SECURITY_USER_PASSWORD": "operations4red"
+])
+
+
 dependencies {
     compile project(":components:rest-support")
 
